@@ -1,1 +1,49 @@
 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Join Us</title>
+  <link rel="stylesheet" href="join-us.css">
+</head>
+<body>
+  <header class="main-header">
+    <h1>🚀 Join Our Team</h1>
+    <p>Select your role and apply now!</p>
+  </header>
+
+  <section class="apply-section">
+    <h2>🎯 Choose Your Role</h2>
+    <form action="https://docs.google.com/forms/d/e/1FAIpQLSfmUWoRQtceNaeovs1Di1BjNA8wWD7r352zpzKQ7xcVyHfzGw/formResponse" method="POST" class="apply-form">
+      
+      <label for="name">🚀 Full Name:</label>
+      <input type="text" id="name" name="entry.462624929" placeholder="Enter your full name" required>
+
+      <label for="discord">💬 Discord Username:</label>
+      <input type="text" id="discord" name="entry.152752490" placeholder="e.g., User#1234" required>
+
+      <label for="role">🎭 Select Role:</label>
+      <div class="custom-dropdown">
+        <select id="role" name="entry.1392398730" required>
+          <option value="" disabled selected>Choose a role...</option>
+          <option value="Admin">Admin</option>
+          <option value="Developer">Developer</option>
+         
+        </select>
+      </div>
+
+      <label for="cv-text">📄 Or Type Your CV Summary:</label>
+      <textarea id="cv-text" name="entry.1577489222" placeholder="Write about your experience, skills, and why you want to join..." rows="7"></textarea>
+
+      <button type="submit" class="smp-btn">Submit Application</button>
+    </form>
+  </section>
+
+ <footer class="footer">
+  <a href="smp.html" class="back-btn"></a>
+  </footer>
+</body>
+</html>
+
