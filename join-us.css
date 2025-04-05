@@ -1,0 +1,217 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Orbitron', sans-serif;
+}
+
+/* Background and Layout */
+body {
+  background: linear-gradient(135deg, #232526, #414345);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Header */
+.main-header {
+  text-align: center;
+  padding: 30px 20px;
+  background: #1b1b1b;
+  border-bottom: 5px solid #ff3366;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+}
+
+.main-header h1 {
+  font-size: 2.5em;
+  text-shadow: 0 0 15px #00ffcc, 0 0 30px #00ffff;
+}
+
+.main-header p {
+  font-size: 1.2em;
+  margin-top: 10px;
+}
+
+/* Apply Section */
+.apply-section {
+  background: #1e1e1e;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.apply-section h2 {
+  font-size: 2em;
+  margin-bottom: 15px;
+  color: #ff3366;
+}
+
+/* Form Styling */
+.apply-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.apply-form label {
+  font-size: 1.2em;
+  margin-top: 15px;
+  color: #fff;
+}
+
+.apply-form input,
+.apply-form select,
+.apply-form textarea {
+  width: 100%;
+  max-width: 400px;
+  padding: 12px;
+  margin-top: 8px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-size: 1em;
+  background: #2a2a2a;
+  color: #fff;
+  box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+/* Placeholder Text */
+.apply-form input::placeholder,
+.apply-form textarea::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Textarea */
+.apply-form textarea {
+  resize: none;
+  height: 160px;
+}
+
+/* Custom Dropdown */
+.custom-dropdown {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+}
+
+.custom-dropdown select {
+  appearance: none;
+  cursor: pointer;
+  background: #2a2a2a url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path fill="%23ffffff" d="M6 8l4 4 4-4z"/></svg>') no-repeat;
+  background-position: right 15px center;
+  background-size: 15px;
+  padding-right: 40px;
+}
+
+/* Custom Checkbox */
+.custom-checkbox {
+  display: flex;
+  align-items: center;
+  font-size: 1.1em;
+  background: #2a2a2a;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.1);
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 10px;
+  position: relative;
+  cursor: pointer;
+}
+
+.custom-checkbox input {
+  opacity: 0;
+  position: absolute;
+  left: 0;
+}
+
+.checkmark {
+  width: 22px;
+  height: 22px;
+  background: #333;
+  border-radius: 5px;
+  margin-right: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s;
+}
+
+.checkmark::after {
+  content: "✔";
+  font-size: 16px;
+  color: transparent;
+  transition: color 0.3s;
+}
+
+.custom-checkbox input:checked + .checkmark {
+  background: #00ffcc;
+}
+
+.custom-checkbox input:checked + .checkmark::after {
+  color: #000;
+}
+
+/* Buttons */
+.smp-btn {
+  font-size: 1.2em;
+  padding: 12px 25px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #00ff00, #33cc33);
+  color: white;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0, 255, 0, 0.7);
+  margin-top: 20px;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.smp-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 15px rgba(0, 255, 0, 0.8);
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.footer a {
+  color: #ff3366;
+  font-size: 1.2em;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/* Glow Effect */
+.glow-effect {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  background: linear-gradient(45deg, #ff3366, #00ffcc, #ff3366, #00ffcc);
+  background-size: 400% 400%;
+  animation: glowing 6s ease-in-out infinite;
+}
+
+@keyframes glowing {
+  0% { background-position: 0 0; }
+  50% { background-position: 400% 0; }
+  100% { background-position: 0 0; }
+}
